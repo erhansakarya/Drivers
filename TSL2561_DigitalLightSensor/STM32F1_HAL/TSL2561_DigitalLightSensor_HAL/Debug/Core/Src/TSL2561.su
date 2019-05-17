@@ -1,0 +1,3 @@
+TSL2561.c:23:9:TSL2561_init	24	static
+TSL2561.c:92:6:TSL2561_handler	32	static
+TSL2561.c:175:16:TSL2561_calculateLux	16	static

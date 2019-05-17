@@ -1,32 +1,41 @@
-09:58:43 **** Incremental Build of configuration Debug for project TTP223B_CatalexTouchSensor_STM32F7_HAL ****
+14:38:32 **** Incremental Build of configuration Debug for project TTP223B_CatalexTouchSensor_STM32F7_HAL ****
 make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F767xx -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F767xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'getTouchState':
-../Core/Src/main.c:336:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../Core/Src/main.c:338:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
+At top level:
+../Core/Src/main.c:334:16: warning: 'getTouchState' defined but not used [-Wunused-function]
+ static uint8_t getTouchState(void){
+                ^~~~~~~~~~~~~
+../Core/Src/main.c:320:13: warning: 'initTouchSensor' defined but not used [-Wunused-function]
+ static void initTouchSensor(void){
+             ^~~~~~~~~~~~~~~
+../Core/Src/main.c:239:13: warning: 'MX_USB_OTG_FS_PCD_Init' defined but not used [-Wunused-function]
+ static void MX_USB_OTG_FS_PCD_Init(void)
+             ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:204:13: warning: 'MX_USART3_UART_Init' defined but not used [-Wunused-function]
+ static void MX_USART3_UART_Init(void)
+             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:159:13: warning: 'MX_ETH_Init' defined but not used [-Wunused-function]
+ static void MX_ETH_Init(void)
+             ^~~~~~~~~~~
 arm-none-eabi-gcc -o "TTP223B_CatalexTouchSensor_STM32F7_HAL.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\erhan\github\Drivers\CatalexTTP223B_TouchSensor\STM32F7_HAL\TTP223B_CatalexTouchSensor_STM32F7_HAL\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TTP223B_CatalexTouchSensor_STM32F7_HAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: TTP223B_CatalexTouchSensor_STM32F7_HAL.elf
  
-arm-none-eabi-size   TTP223B_CatalexTouchSensor_STM32F7_HAL.elf 
 arm-none-eabi-objdump -h -S  TTP223B_CatalexTouchSensor_STM32F7_HAL.elf  > "TTP223B_CatalexTouchSensor_STM32F7_HAL.list"
+arm-none-eabi-size   TTP223B_CatalexTouchSensor_STM32F7_HAL.elf 
    text	   data	    bss	    dec	    hex	filename
-  16216	     20	   2796	  19032	   4a58	TTP223B_CatalexTouchSensor_STM32F7_HAL.elf
+   8832	     20	   1572	  10424	   28b8	TTP223B_CatalexTouchSensor_STM32F7_HAL.elf
 Finished building: default.size.stdout
  
 Finished building: TTP223B_CatalexTouchSensor_STM32F7_HAL.list
  
-09:59:08 **** Incremental Build of configuration Debug for project TTP223B_CatalexTouchSensor_STM32F7_HAL ****
+14:38:41 **** Incremental Build of configuration Debug for project TTP223B_CatalexTouchSensor_STM32F7_HAL ****
 make -j4 all 
 arm-none-eabi-size   TTP223B_CatalexTouchSensor_STM32F7_HAL.elf 
    text	   data	    bss	    dec	    hex	filename
-  16216	     20	   2796	  19032	   4a58	TTP223B_CatalexTouchSensor_STM32F7_HAL.elf
-Finished building: default.size.stdout
- 
-09:59:31 **** Incremental Build of configuration Debug for project TTP223B_CatalexTouchSensor_STM32F7_HAL ****
-make -j4 all 
-arm-none-eabi-size   TTP223B_CatalexTouchSensor_STM32F7_HAL.elf 
-   text	   data	    bss	    dec	    hex	filename
-  16216	     20	   2796	  19032	   4a58	TTP223B_CatalexTouchSensor_STM32F7_HAL.elf
+   8832	     20	   1572	  10424	   28b8	TTP223B_CatalexTouchSensor_STM32F7_HAL.elf
 Finished building: default.size.stdout
  

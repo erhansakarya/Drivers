@@ -51,6 +51,7 @@ static void MX_USB_OTG_FS_PCD_Init(void);
 static void initTouchSensor(void);
 static uint8_t getTouchState(void);
 
+static void initTouchSensorITMode(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
@@ -74,17 +75,18 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_ETH_Init();
-  MX_USART3_UART_Init();
-  MX_USB_OTG_FS_PCD_Init();
+  //MX_ETH_Init();
+  //MX_USART3_UART_Init();
+  //MX_USB_OTG_FS_PCD_Init();
 
-  initTouchSensor();
+  //initTouchSensor();
+  initTouchSensorITMode();
 
   /* Infinite loop */
   while (1)
   {
 
-	  HAL_GPIO_WritePin(GPIOB, LD3_Pin, getTouchState());
+	 // HAL_GPIO_WritePin(GPIOB, LD3_Pin, getTouchState());
 
   }
 
@@ -332,6 +334,43 @@ static void initTouchSensor(void){
 static uint8_t getTouchState(void){
 
 	HAL_GPIO_ReadPin(GPIOG, GPIO_PIN_0);
+
+}
+
+static void initTouchSensorITMode(void){
+
+	GPIO_InitTypeDef GPIO_InitStruct;
+
+	__HAL_RCC_GPIOG_CLK_ENABLE();
+
+	GPIO_InitStruct.Pin = GPIO_PIN_0;
+	GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+
+	HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
+
+
+
+	HAL_NVIC_EnableIRQ(EXTI0_IRQn);
+
+
+}
+
+/* NOTE: This is IRQHandler */
+void EXTI0_IRQHandler(void){
+
+	HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_0);	/* NOTE: This calls HAL_GPIO_EXTI_Callback function */
+
+}
+
+/* NOTE: This determines the GPIO_Pin, occuring interrupt */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+
+	if(GPIO_Pin == GPIO_PIN_0){
+
+		HAL_GPIO_TogglePin(GPIOB, LD3_Pin);
+
+	}
 
 }
 

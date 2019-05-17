@@ -1,10 +1,10 @@
-09:59:31 **** Incremental Build of configuration Debug for project TTP223B_CatalexTouchSensor_STM32F7_HAL ****
+14:38:41 **** Incremental Build of configuration Debug for project TTP223B_CatalexTouchSensor_STM32F7_HAL ****
 make -j4 all 
 arm-none-eabi-size   TTP223B_CatalexTouchSensor_STM32F7_HAL.elf 
    text	   data	    bss	    dec	    hex	filename
-  16216	     20	   2796	  19032	   4a58	TTP223B_CatalexTouchSensor_STM32F7_HAL.elf
+   8832	     20	   1572	  10424	   28b8	TTP223B_CatalexTouchSensor_STM32F7_HAL.elf
 Finished building: default.size.stdout
  
 
-09:59:34 Build Finished. 0 errors, 0 warnings. (took 2s.95ms)
+14:38:43 Build Finished. 0 errors, 0 warnings. (took 1s.953ms)
 

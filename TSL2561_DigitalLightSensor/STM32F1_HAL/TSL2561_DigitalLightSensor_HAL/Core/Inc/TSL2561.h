@@ -38,7 +38,7 @@ extern "C" {
 #define TSL2561_DATA1LOW		0x0E	/* NOTE: Low byte of ADC channel 1 */
 #define TSL2561_DATA1HIGH		0x0F	/* NOTE: High byte of ADC channel 1 */
 
-#define TSL2561_COMMAND_REG		0x90	/* NOTE: 1(CMD) + 0(CLEAR IT) + 0(WORD) + 1(BLOCK) + xxxx(REG_ADDR) */
+#define TSL2561_COMMAND_REG		0x80	/* NOTE: 1(CMD) + 0(CLEAR IT) + 0(WORD) + 0(BLOCK) + xxxx(REG_ADDR) */
 
 #define TSL2561_POWER_UP		0x03	/* NOTE: Control register power up value */
 #define TSL2561_POWER_DOWN		0x00	/* NOTE: Control register power down value */
@@ -47,6 +47,7 @@ extern "C" {
 
 
 uint8_t TSL2561_init(void);
+void TSL2561_handler(void *lux);
 
 #ifdef __cplusplus
 }

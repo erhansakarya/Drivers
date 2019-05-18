@@ -1,0 +1,57 @@
+/**
+  ******************************************************************************
+  * @file           : main.h
+  * @brief          : Header for main.c file.
+  *                   This file contains the common defines of the application.
+  ******************************************************************************
+  * @attention
+  *
+  ******************************************************************************
+  */
+
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __TSL2561_H
+#define __TSL2561_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* Includes ------------------------------------------------------------------*/
+#include "stm32f1xx_hal.h"
+
+#define TSL2561_ADDR_GND		0x52	/* NOTE: ADDR_SEL pin is ground */
+#define TSL2561_ADDR_FLOAT		0x72	/* NOTE: ADDR_SEL pin is float */
+#define TSL2561_ADDR_VDD		0x92	/* NOTE: ADDR_SEL pin is vdd */
+
+#define TSL2561_CONTROL			0x00	/* NOTE: Control of basic functions */
+#define TSL2561_TIMING			0x01	/* NOTE: Integration time/gain control */
+#define TSL2561_THRESHLOWLOW	0x02	/* NOTE: Low byte of low interrupt threshold */
+#define TSL2561_THRESHLOWHIGH	0x03	/* NOTE: High byte of low interrupt threshold */
+#define TSL2561_THRESHHIGHLOW	0x04	/* NOTE: Low byte of high interrupt threshold */
+#define TSL2561_THRESHHIGHHIGH	0x05	/* NOTE: High byte of high interrupt threshold */
+#define TSL2561_INTERRUPT		0x06	/* NOTE: Interrupt Control */
+#define TSL2561_CRC				0x08	/* NOTE: Factory test - not a user register */
+#define TSL2561_ID				0x0A	/* NOTE: Part number/Rev ID */
+#define TSL2561_DATA0LOW		0x0C	/* NOTE: Low byte of ADC channel 0 */
+#define TSL2561_DATA0HIGH		0x0D	/* NOTE: High byte of ADC channel 0 */
+#define TSL2561_DATA1LOW		0x0E	/* NOTE: Low byte of ADC channel 1 */
+#define TSL2561_DATA1HIGH		0x0F	/* NOTE: High byte of ADC channel 1 */
+
+#define TSL2561_COMMAND_REG		0x90	/* NOTE: 1(CMD) + 0(CLEAR IT) + 0(WORD) + 1(BLOCK) + xxxx(REG_ADDR) */
+
+#define TSL2561_POWER_UP		0x03	/* NOTE: Control register power up value */
+#define TSL2561_POWER_DOWN		0x00	/* NOTE: Control register power down value */
+
+#define TSL2561_DEV_ID			0x50	/* NOTE: Part number identification */
+
+
+uint8_t TSL2561_init(void);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __TSL2561_H */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

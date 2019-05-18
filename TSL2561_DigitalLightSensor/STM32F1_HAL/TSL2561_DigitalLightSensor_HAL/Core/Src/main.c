@@ -53,7 +53,7 @@ int main(void)
 
   /* MCU Configuration--------------------------------------------------------*/
 
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+	/* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
 
   /* Configure the system clock */
@@ -64,11 +64,16 @@ int main(void)
   MX_USART2_UART_Init();
   MX_I2C1_Init();
 
+  float lux = 0;
   TSL2561_init();
+
 
   /* Infinite loop */
   while (1)
   {
+
+	  HAL_Delay(1000);
+	  TSL2561_handler(&lux);
 
   }
 

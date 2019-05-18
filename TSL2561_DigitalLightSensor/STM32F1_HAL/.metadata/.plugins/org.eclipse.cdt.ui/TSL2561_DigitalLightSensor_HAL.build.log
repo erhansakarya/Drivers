@@ -1,25 +1,10 @@
-19:48:13 **** Incremental Build of configuration Debug for project TSL2561_DigitalLightSensor_HAL ****
+11:42:52 **** Incremental Build of configuration Debug for project TSL2561_DigitalLightSensor_HAL ****
 make -j4 all 
-arm-none-eabi-gcc "../Core/Src/TSL2561.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/TSL2561.d" -MT"Core/Src/TSL2561.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TSL2561.o"
-../Core/Src/TSL2561.c: In function 'TSL2561_handler':
-../Core/Src/TSL2561.c:97:2: warning: 'memset' used with length equal to number of elements without multiplication by element size [-Wmemset-elt-size]
-  memset(adcData, 0, 2);
-  ^~~~~~
-../Core/Src/TSL2561.c: In function 'TSL2561_calculateLux':
-../Core/Src/TSL2561.c:179:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
-arm-none-eabi-gcc -o "TSL2561_DigitalLightSensor_HAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TSL2561_DigitalLightSensor_HAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TSL2561_DigitalLightSensor_HAL.elf
- 
-arm-none-eabi-objdump -h -S  TSL2561_DigitalLightSensor_HAL.elf  > "TSL2561_DigitalLightSensor_HAL.list"
 arm-none-eabi-size   TSL2561_DigitalLightSensor_HAL.elf 
    text	   data	    bss	    dec	    hex	filename
-   9992	     20	   1716	  11728	   2dd0	TSL2561_DigitalLightSensor_HAL.elf
+  19284	    124	   1716	  21124	   5284	TSL2561_DigitalLightSensor_HAL.elf
 Finished building: default.size.stdout
  
-Finished building: TSL2561_DigitalLightSensor_HAL.list
- 
 
-19:48:17 Build Finished. 0 errors, 2 warnings. (took 4s.22ms)
+11:42:54 Build Finished. 0 errors, 0 warnings. (took 1s.586ms)
 

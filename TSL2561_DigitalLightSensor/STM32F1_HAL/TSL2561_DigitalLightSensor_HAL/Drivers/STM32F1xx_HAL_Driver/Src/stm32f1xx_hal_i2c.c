@@ -255,7 +255,7 @@
   * @{
   */
 
-#define HAL_I2C_MODULE_ENABLED	/* WARNING: Module can not enable */
+#define HAL_I2C_MODULE_ENABLED
 
 #ifdef HAL_I2C_MODULE_ENABLED
 

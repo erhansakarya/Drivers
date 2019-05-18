@@ -1,4 +1,5 @@
 #include <string.h>
+#include <math.h>
 
 #include "main.h"
 #include "TSL2561.h"
@@ -18,7 +19,7 @@
  * power up olduktan sonra default integration time olan 400ms sonra adc değerleri hazır.
  * */
 
-static uint8_t TSL2561_calculateLux(uint16_t *adcData);
+static uint8_t TSL2561_calculateLux(uint16_t *adcData, float *luxVal);
 
 uint8_t TSL2561_init(void){
 
@@ -70,15 +71,15 @@ uint8_t TSL2561_init(void){
 		error = 1;
 	}
 
-	/* NOTE: Configure Timing Register */
-	memset(pData, 0, (sizeof(pData) / sizeof(pData[0])));
-	pData[0] = TSL2561_COMMAND_REG | TSL2561_TIMING;
-	pData[1] = 0x00;	/* NOTE: integration time is 13.7ms */
-	if(HAL_I2C_Master_Transmit(&hi2c1, TSL2561_ADDR_FLOAT, pData,
-			(sizeof(pData) / sizeof(pData[0])), HAL_MAX_DELAY) != HAL_OK){
-
-		Error_Handler();
-	}
+//	/* NOTE: Configure Timing Register */
+//	memset(pData, 0, (sizeof(pData) / sizeof(pData[0])));
+//	pData[0] = TSL2561_COMMAND_REG | TSL2561_TIMING;
+//	pData[1] = 0x00;	/* NOTE: integration time is 13.7ms */
+//	if(HAL_I2C_Master_Transmit(&hi2c1, TSL2561_ADDR_FLOAT, pData,
+//			(sizeof(pData) / sizeof(pData[0])), HAL_MAX_DELAY) != HAL_OK){
+//
+//		Error_Handler();
+//	}
 
 
 	/* NOTE: Configure Interrupt Threshold registers */
@@ -89,16 +90,17 @@ uint8_t TSL2561_init(void){
 
 }
 
-void TSL2561_handler(void *pvParameters){
+void TSL2561_handler(void *lux){
 
 	uint8_t pData[2];
 	uint16_t adcData[2];
+	float luxVal = 0;
 
-	memset(adcData, 0, 2);
+	memset(adcData, 0, 4);
 
-	/* NOTE: Get ADC channel 0 lower byte */
+	/* NOTE: Get ADC channel 0 lower and higher bytes */
 	memset(pData, 0, (sizeof(pData) / sizeof(pData[0])));
-	pData[0] = TSL2561_COMMAND_REG | TSL2561_DATA0LOW;
+	pData[0] = (TSL2561_COMMAND_REG | (0x01 << 4) ) | TSL2561_DATA0LOW;
 	if(HAL_I2C_Master_Transmit(&hi2c1, TSL2561_ADDR_FLOAT, pData,
 			1, HAL_MAX_DELAY) != HAL_OK ){
 
@@ -114,15 +116,6 @@ void TSL2561_handler(void *pvParameters){
 
 	adcData[0] |= pData[0];
 
-	/* NOTE: Get ADC channel 0 higher byte */
-	memset(pData, 0, (sizeof(pData) / sizeof(pData[0])));
-	pData[0] = TSL2561_COMMAND_REG | TSL2561_DATA0HIGH;
-	if(HAL_I2C_Master_Transmit(&hi2c1, TSL2561_ADDR_FLOAT, pData,
-			1, HAL_MAX_DELAY) != HAL_OK ){
-
-		Error_Handler();
-	}
-
 	memset(pData, 0, (sizeof(pData) / sizeof(pData[0])));
 	if(HAL_I2C_Master_Receive(&hi2c1, TSL2561_ADDR_FLOAT, pData,
 			1, HAL_MAX_DELAY) != HAL_OK ){
@@ -132,9 +125,9 @@ void TSL2561_handler(void *pvParameters){
 
 	adcData[0] |= pData[0] << 8;
 
-	/* NOTE: Get ADC channel 1 lower byte */
+	/* NOTE: Get ADC channel 1 lower and higher bytes */
 	memset(pData, 0, (sizeof(pData) / sizeof(pData[0])));
-	pData[0] = TSL2561_COMMAND_REG | TSL2561_DATA1LOW;
+	pData[0] = (TSL2561_COMMAND_REG | (0x01 << 4) ) | TSL2561_DATA1LOW;
 	if(HAL_I2C_Master_Transmit(&hi2c1, TSL2561_ADDR_FLOAT, pData,
 			1, HAL_MAX_DELAY) != HAL_OK ){
 
@@ -150,15 +143,6 @@ void TSL2561_handler(void *pvParameters){
 
 	adcData[1] |= pData[0];
 
-	/* NOTE: Get ADC channel 1 higher byte */
-	memset(pData, 0, (sizeof(pData) / sizeof(pData[0])));
-	pData[0] = TSL2561_COMMAND_REG | TSL2561_DATA1HIGH;
-	if(HAL_I2C_Master_Transmit(&hi2c1, TSL2561_ADDR_FLOAT, pData,
-			1, HAL_MAX_DELAY) != HAL_OK ){
-
-		Error_Handler();
-	}
-
 	memset(pData, 0, (sizeof(pData) / sizeof(pData[0])));
 	if(HAL_I2C_Master_Receive(&hi2c1, TSL2561_ADDR_FLOAT, pData,
 			1, HAL_MAX_DELAY) != HAL_OK ){
@@ -168,12 +152,42 @@ void TSL2561_handler(void *pvParameters){
 
 	adcData[1] |= pData[0] << 8;
 
-	TSL2561_calculateLux(adcData);
+	TSL2561_calculateLux(adcData, &luxVal);
+
+	*(float *)lux = luxVal;
 
 }
 
-static uint8_t TSL2561_calculateLux(uint16_t *adcData){
+static uint8_t TSL2561_calculateLux(uint16_t *adcData, float *luxVal){
 
-	/* NOTE: Calculate Lux */
+	float divAdcData = ((float)adcData[1] / (float)adcData[0]);
+	uint8_t error = 0;
+
+	if( (0.00 < divAdcData) && (divAdcData <= 0.50) ){
+
+		*luxVal = (0.0304 * adcData[0]) - (0.062 * adcData[0] * pow(divAdcData, 1.4));
+
+	}else if( (0.50 < divAdcData) && (divAdcData <= 0.61) ){
+
+		*luxVal = (0.0224 * adcData[0]) - (0.031 * adcData[1]);
+
+	}else if( (0.61 < divAdcData) && (divAdcData <= 0.80) ){
+
+		*luxVal = (0.0128 * adcData[0]) - (0.0153 * adcData[1]);
+
+	}else if( (0.80 < divAdcData) && (divAdcData <= 1.30) ){
+
+		*luxVal = (0.00146 * adcData[0]) - (0.00112 * adcData[1]);
+
+	}else if( divAdcData > 1.30 ){
+
+		*luxVal = 0;
+
+	}else{
+
+		// error
+		error = 1;
+
+	}
 
 }

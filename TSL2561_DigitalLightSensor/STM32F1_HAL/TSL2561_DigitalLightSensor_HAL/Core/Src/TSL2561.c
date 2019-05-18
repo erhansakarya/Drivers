@@ -4,21 +4,6 @@
 #include "main.h"
 #include "TSL2561.h"
 
-/*
- * NOTES:
- * Conversation cycle sürei boyunca beklemek gerekiyor.
- * threshold above and below değerlerinin dışına çıkınca interrupt oluşturur.
- * ADDR SEL pininin durumu bizde nedir?
- ** GND 0101001
- ** FLOAT 0111001
- ** VDD 1001001
- * INT pini, input open drain(active low), INT pininde direnç var mı?
- * Figure 8'deki değerlere bakmam gerekebilir.
- * Conversation time 100ms. max 400ms.
- *
- * power up olduktan sonra default integration time olan 400ms sonra adc değerleri hazır.
- * */
-
 static uint8_t TSL2561_calculateLux(uint16_t *adcData, float *luxVal);
 
 uint8_t TSL2561_init(void){
@@ -71,18 +56,19 @@ uint8_t TSL2561_init(void){
 		error = 1;
 	}
 
-//	/* NOTE: Configure Timing Register */
-//	memset(pData, 0, (sizeof(pData) / sizeof(pData[0])));
-//	pData[0] = TSL2561_COMMAND_REG | TSL2561_TIMING;
-//	pData[1] = 0x00;	/* NOTE: integration time is 13.7ms */
-//	if(HAL_I2C_Master_Transmit(&hi2c1, TSL2561_ADDR_FLOAT, pData,
-//			(sizeof(pData) / sizeof(pData[0])), HAL_MAX_DELAY) != HAL_OK){
-//
-//		Error_Handler();
-//	}
+	/* NOTE: Configure Timing Register */
+	memset(pData, 0, (sizeof(pData) / sizeof(pData[0])));
+	pData[0] = TSL2561_COMMAND_REG | TSL2561_TIMING;
+	pData[1] = 0x00;	/* NOTE: integration time is 13.7ms and 16x gain */
+	if(HAL_I2C_Master_Transmit(&hi2c1, TSL2561_ADDR_FLOAT, pData,
+			(sizeof(pData) / sizeof(pData[0])), HAL_MAX_DELAY) != HAL_OK){
+
+		Error_Handler();
+	}
 
 
 	/* NOTE: Configure Interrupt Threshold registers */
+
 
 	/* NOTE: Set interrupt control register */
 
@@ -97,6 +83,8 @@ void TSL2561_handler(void *lux){
 	float luxVal = 0;
 
 	memset(adcData, 0, 4);
+
+	HAL_Delay(500);	/* NOTE: Wait for integration time */
 
 	/* NOTE: Get ADC channel 0 lower and higher bytes */
 	memset(pData, 0, (sizeof(pData) / sizeof(pData[0])));

@@ -200,7 +200,7 @@ typedef struct
 	
 }I2C_HandleTypeDef;
 
-extern I2C_HandleTypeDef hi2c1;
+I2C_HandleTypeDef hi2c1;
 
 /**
   * @}

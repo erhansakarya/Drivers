@@ -2831,3 +2831,250 @@ org.eclipse.swt.SWTException: Widget is disposed
 
 !ENTRY org.eclipse.cdt.ui 4 0 2019-05-18 10:57:06.364
 !MESSAGE Unable to resolve the selection to a semantic object
+!SESSION 2019-05-18 11:52:10.072 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_202
+java.vendor=AdoptOpenJdk
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-05-18 11:52:53.257
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-05-18 11:52:53.265
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-05-18 11:52:53.484
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-05-18 11:52:53.492
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-05-18 11:52:53.500
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-05-18 11:52:53.507
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 4 4 2019-05-18 11:52:53.515
+!MESSAGE Type or version is empty: ; 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain 2 2 2019-05-18 11:52:53.522
+!MESSAGE Falling back to default toolchain
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2019-05-18 11:53:05.933
+!MESSAGE Started RMI Server, listening on port 41337
+2019-05-18 12:42:53,052 [INFO] com.st.components.util.ApplicationProperties.getApplicationPath(ApplicationProperties.java:181) - Using Application install path: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831
+2019-05-18 12:42:53,145 [INFO] com.st.microxplorer.mcufinder.db.DbMcusXml.setDbPaths(DbMcusXml.java:68) - Set database path to: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831\\db\/mcu/
+2019-05-18 12:42:53,153 [INFO] com.st.microxplorer.mcufinder.db.DbBoardsPdsc.setBoardPluginDbPath(DbBoardsPdsc.java:54) - Set plugin database path to: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831\\db\/plugins/boardmanager/
+2019-05-18 12:42:53,154 [INFO] com.st.microxplorer.mcufinder.db.DbMcus.setPluginImagesPath(DbMcus.java:262) - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831\\db\/plugins/mcufinder/images/
+2019-05-18 12:42:53,154 [INFO] com.st.microxplorer.mcufinder.db.DbBoards.setPluginImagesPath(DbBoards.java:225) - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831\\db\/plugins/mcufinder/images/
+2019-05-18 12:42:53,164 [INFO] com.st.microxplorer.mcufinder.db.APIGFXSelector.setDatabasePath(APIGFXSelector.java:72) - Set database path to: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831\\db\/plugins/mcufinder/mcu/
+2019-05-18 12:42:53,317 [INFO] com.st.microxplorer.mcufinder.db.DbMcusAds.setDbPaths(DbMcusAds.java:72) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/
+2019-05-18 12:42:53,319 [INFO] com.st.microxplorer.mcufinder.db.DbMcusDocs.setDbPaths(DbMcusDocs.java:90) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/
+2019-05-18 12:42:53,323 [INFO] com.st.microxplorer.mcufinder.db.DbMcusJson.setDbPaths(DbMcusJson.java:59) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/
+2019-05-18 12:42:53,326 [INFO] com.st.microxplorer.mcufinder.db.DbBoardsDocs.setDbPaths(DbBoardsDocs.java:82) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/
+2019-05-18 12:42:53,329 [INFO] com.st.microxplorer.mcufinder.db.DbBoardsJson.setDbPaths(DbBoardsJson.java:51) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/
+2019-05-18 12:42:53,567 [INFO] com.st.microxplorer.mcufinder.db.crossselector.CrossReferenceDbSqlite.setDbPaths(CrossReferenceDbSqlite.java:197) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/cs/
+2019-05-18 12:42:53,976 [INFO] com.st.microxplorer.db.RulesReader.<init>(RulesReader.java:52) - Compatibility file has been processed (156 Rules)
+2019-05-18 12:42:54,323 [INFO] com.st.microxplorer.maingui.MicroXplorer.checkJavaVersion(MicroXplorer.java:521) - Detected Java Version = 1.8.0_202
+2019-05-18 12:42:54,324 [INFO] com.st.microxplorer.mcufinder.db.DbMcusXml.setDbPaths(DbMcusXml.java:68) - Set database path to: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831\\db\/mcu/
+2019-05-18 12:42:54,325 [INFO] com.st.microxplorer.mcufinder.db.DbBoardsPdsc.setBoardPluginDbPath(DbBoardsPdsc.java:54) - Set plugin database path to: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831\\db\/plugins/boardmanager/
+2019-05-18 12:42:54,325 [INFO] com.st.microxplorer.mcufinder.db.DbMcus.setPluginImagesPath(DbMcus.java:262) - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831\\db\/plugins/mcufinder/images/
+2019-05-18 12:42:54,326 [INFO] com.st.microxplorer.mcufinder.db.DbBoards.setPluginImagesPath(DbBoards.java:225) - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831\\db\/plugins/mcufinder/images/
+2019-05-18 12:42:54,326 [INFO] com.st.microxplorer.mcufinder.db.APIGFXSelector.setDatabasePath(APIGFXSelector.java:72) - Set database path to: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831\\db\/plugins/mcufinder/mcu/
+2019-05-18 12:42:54,327 [WARN] com.st.microxplorer.mcufinder.db.DbFile.setPath(DbFile.java:31) - Overriding database path with different value: C:\Users\erhan\.stmcufinder\plugins\mcufinder/ => C:\Users\erhan\.stmcufinder\plugins\mcufinder
+2019-05-18 12:42:54,327 [INFO] com.st.microxplorer.mcufinder.db.DbMcusAds.setDbPaths(DbMcusAds.java:72) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/
+2019-05-18 12:42:54,328 [WARN] com.st.microxplorer.mcufinder.db.DbFile.setPath(DbFile.java:31) - Overriding database path with different value: C:\Users\erhan\.stmcufinder\plugins\mcufinder/ => C:\Users\erhan\.stmcufinder\plugins\mcufinder
+2019-05-18 12:42:54,328 [INFO] com.st.microxplorer.mcufinder.db.DbMcusDocs.setDbPaths(DbMcusDocs.java:90) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/
+2019-05-18 12:42:54,329 [WARN] com.st.microxplorer.mcufinder.db.DbFile.setPath(DbFile.java:31) - Overriding database path with different value: C:\Users\erhan\.stmcufinder\plugins\mcufinder/ => C:\Users\erhan\.stmcufinder\plugins\mcufinder
+2019-05-18 12:42:54,329 [INFO] com.st.microxplorer.mcufinder.db.DbMcusJson.setDbPaths(DbMcusJson.java:59) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/
+2019-05-18 12:42:54,329 [WARN] com.st.microxplorer.mcufinder.db.DbFile.setPath(DbFile.java:31) - Overriding database path with different value: C:\Users\erhan\.stmcufinder\plugins\mcufinder/ => C:\Users\erhan\.stmcufinder\plugins\mcufinder
+2019-05-18 12:42:54,330 [INFO] com.st.microxplorer.mcufinder.db.DbBoardsDocs.setDbPaths(DbBoardsDocs.java:82) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/
+2019-05-18 12:42:54,330 [WARN] com.st.microxplorer.mcufinder.db.DbFile.setPath(DbFile.java:31) - Overriding database path with different value: C:\Users\erhan\.stmcufinder\plugins\mcufinder/ => C:\Users\erhan\.stmcufinder\plugins\mcufinder
+2019-05-18 12:42:54,331 [INFO] com.st.microxplorer.mcufinder.db.DbBoardsJson.setDbPaths(DbBoardsJson.java:51) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/
+2019-05-18 12:42:54,331 [WARN] com.st.microxplorer.mcufinder.db.DbFile.setPath(DbFile.java:31) - Overriding database path with different value: C:\Users\erhan\.stmcufinder\plugins\mcufinder/ => C:\Users\erhan\.stmcufinder\plugins\mcufinder
+2019-05-18 12:42:54,331 [WARN] com.st.microxplorer.mcufinder.db.DbFile.setPath(DbFile.java:31) - Overriding database path with different value: C:\Users\erhan\.stmcufinder\plugins\mcufinder/ => C:\Users\erhan\.stmcufinder\plugins\mcufinder
+2019-05-18 12:42:54,332 [INFO] com.st.microxplorer.mcufinder.db.crossselector.CrossReferenceDbSqlite.setDbPaths(CrossReferenceDbSqlite.java:197) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/cs/
+2019-05-18 12:42:54,749 [INFO] com.st.microxplorer.maingui.MainPanel.<init>(MainPanel.java:211) - HeapMemory: 268435456
+2019-05-18 12:42:55,072 [INFO] com.st.microxplorer.mcufinder.db.DbMcusXml.setDbPaths(DbMcusXml.java:68) - Set database path to: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831\\db\/mcu/
+2019-05-18 12:42:55,072 [INFO] com.st.microxplorer.mcufinder.db.DbBoardsPdsc.setBoardPluginDbPath(DbBoardsPdsc.java:54) - Set plugin database path to: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831\\db\/plugins/boardmanager/
+2019-05-18 12:42:55,073 [INFO] com.st.microxplorer.mcufinder.db.DbMcus.setPluginImagesPath(DbMcus.java:262) - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831\\db\/plugins/mcufinder/images/
+2019-05-18 12:42:55,076 [INFO] com.st.microxplorer.mcufinder.db.DbBoards.setPluginImagesPath(DbBoards.java:225) - Set plugin images path to: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831\\db\/plugins/mcufinder/images/
+2019-05-18 12:42:55,077 [INFO] com.st.microxplorer.mcufinder.db.APIGFXSelector.setDatabasePath(APIGFXSelector.java:72) - Set database path to: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831\\db\/plugins/mcufinder/mcu/
+2019-05-18 12:42:55,089 [WARN] com.st.microxplorer.mcufinder.db.DbFile.setPath(DbFile.java:31) - Overriding database path with different value: C:\Users\erhan\.stmcufinder\plugins\mcufinder/ => C:\Users\erhan\.stmcufinder\plugins\mcufinder
+2019-05-18 12:42:55,091 [INFO] com.st.microxplorer.mcufinder.db.DbMcusAds.setDbPaths(DbMcusAds.java:72) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/
+2019-05-18 12:42:55,101 [WARN] com.st.microxplorer.mcufinder.db.DbFile.setPath(DbFile.java:31) - Overriding database path with different value: C:\Users\erhan\.stmcufinder\plugins\mcufinder/ => C:\Users\erhan\.stmcufinder\plugins\mcufinder
+2019-05-18 12:42:55,101 [INFO] com.st.microxplorer.mcufinder.db.DbMcusDocs.setDbPaths(DbMcusDocs.java:90) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/
+2019-05-18 12:42:55,106 [WARN] com.st.microxplorer.mcufinder.db.DbFile.setPath(DbFile.java:31) - Overriding database path with different value: C:\Users\erhan\.stmcufinder\plugins\mcufinder/ => C:\Users\erhan\.stmcufinder\plugins\mcufinder
+2019-05-18 12:42:55,107 [INFO] com.st.microxplorer.mcufinder.db.DbMcusJson.setDbPaths(DbMcusJson.java:59) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/
+2019-05-18 12:42:55,107 [WARN] com.st.microxplorer.mcufinder.db.DbFile.setPath(DbFile.java:31) - Overriding database path with different value: C:\Users\erhan\.stmcufinder\plugins\mcufinder/ => C:\Users\erhan\.stmcufinder\plugins\mcufinder
+2019-05-18 12:42:55,108 [INFO] com.st.microxplorer.mcufinder.db.DbBoardsDocs.setDbPaths(DbBoardsDocs.java:82) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/
+2019-05-18 12:42:55,108 [WARN] com.st.microxplorer.mcufinder.db.DbFile.setPath(DbFile.java:31) - Overriding database path with different value: C:\Users\erhan\.stmcufinder\plugins\mcufinder/ => C:\Users\erhan\.stmcufinder\plugins\mcufinder
+2019-05-18 12:42:55,109 [INFO] com.st.microxplorer.mcufinder.db.DbBoardsJson.setDbPaths(DbBoardsJson.java:51) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/
+2019-05-18 12:42:55,110 [WARN] com.st.microxplorer.mcufinder.db.DbFile.setPath(DbFile.java:31) - Overriding database path with different value: C:\Users\erhan\.stmcufinder\plugins\mcufinder/ => C:\Users\erhan\.stmcufinder\plugins\mcufinder
+2019-05-18 12:42:55,110 [WARN] com.st.microxplorer.mcufinder.db.DbFile.setPath(DbFile.java:31) - Overriding database path with different value: C:\Users\erhan\.stmcufinder\plugins\mcufinder/ => C:\Users\erhan\.stmcufinder\plugins\mcufinder
+2019-05-18 12:42:55,111 [INFO] com.st.microxplorer.mcufinder.db.crossselector.CrossReferenceDbSqlite.setDbPaths(CrossReferenceDbSqlite.java:197) - Set database path to: C:\Users\erhan\.stmcufinder\plugins\mcufinder//mcu/cs/
+2019-05-18 12:42:55,217 [INFO] com.st.components.util.ApplicationProperties.getApplicationPath(ApplicationProperties.java:181) - Using Application install path: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831
+2019-05-18 12:42:55,220 [INFO] com.st.microxplorer.plugin.PluginManage.PluginSearch(PluginManage.java:178) - Search for loadable plugins [exclusion list=]
+2019-05-18 12:42:55,283 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:292) - Check plugin analytics
+2019-05-18 12:42:55,382 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:342) - Loaded plugin analytics (category:tool,tabindex:-1)
+2019-05-18 12:42:55,383 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:292) - Check plugin clock
+2019-05-18 12:42:55,459 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:342) - Loaded plugin clock (category:base,tabindex:2)
+2019-05-18 12:42:55,469 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:292) - Check plugin ddr
+2019-05-18 12:42:55,527 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:342) - Loaded plugin ddr (category:tool,tabindex:6)
+2019-05-18 12:42:55,528 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:292) - Check plugin filemanager
+2019-05-18 12:42:55,990 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:342) - Loaded plugin filemanager (category:base,tabindex:10)
+2019-05-18 12:42:55,990 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:292) - Check plugin ipmanager
+2019-05-18 12:42:56,649 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:342) - Loaded plugin ipmanager (category:base,tabindex:5)
+2019-05-18 12:42:56,650 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:292) - Check plugin pinoutandconfiguration
+2019-05-18 12:42:57,334 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:342) - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2019-05-18 12:42:57,335 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:292) - Check plugin pinoutconfig
+2019-05-18 12:42:57,939 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:342) - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2019-05-18 12:42:57,939 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:292) - Check plugin power
+2019-05-18 12:42:58,004 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:342) - Loaded plugin power (category:power,tabindex:4)
+2019-05-18 12:42:58,004 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:292) - Check plugin projectmanager
+2019-05-18 12:42:58,038 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:342) - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2019-05-18 12:42:58,039 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:292) - Check plugin thirdparty
+2019-05-18 12:42:59,597 [INFO] com.st.microxplorer.plugins.thirdparty.xml.ThirdPartyDb.readDb(ThirdPartyDb.java:293) - Open Third Party DataBase File (C:/Users/erhan/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 133 ms. number of Sw pack : 13
+2019-05-18 12:42:59,632 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:342) - Loaded plugin thirdparty (category:base,tabindex:-1)
+2019-05-18 12:42:59,632 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:292) - Check plugin tools
+2019-05-18 12:42:59,655 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:342) - Loaded plugin tools (category:base,tabindex:7)
+2019-05-18 12:42:59,655 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:292) - Check plugin updater
+2019-05-18 12:42:59,696 [INFO] com.st.microxplorer.plugin.PluginManage.loadPluginJar(PluginManage.java:342) - Loaded plugin updater (category:base,tabindex:12)
+2019-05-18 12:42:59,697 [INFO] com.st.microxplorer.plugin.PluginManage.PluginSearch(PluginManage.java:265) - PluginManage : Loaded plugins [12]
+2019-05-18 12:43:00,422 [INFO] com.st.microxplorer.plugins.pinoutconfig.gui.PinOutPanel.setPackage(PinOutPanel.java:1361) - setPackage(No Configuration,No Configuration)
+2019-05-18 12:43:00,936 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add adc
+2019-05-18 12:43:00,951 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add aes
+2019-05-18 12:43:01,033 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add can
+2019-05-18 12:43:01,055 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add comp
+2019-05-18 12:43:01,121 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add cryp
+2019-05-18 12:43:01,178 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add dfsdm
+2019-05-18 12:43:01,373 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add dma
+2019-05-18 12:43:01,409 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add fatfs
+2019-05-18 12:43:01,586 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add fmc
+2019-05-18 12:43:02,297 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add freertos
+2019-05-18 12:43:02,338 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add genericplugin
+2019-05-18 12:43:02,523 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add gfxmmu
+2019-05-18 12:43:02,850 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add gfxsimulator
+2019-05-18 12:43:03,153 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add gic
+2019-05-18 12:43:03,443 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add gpio
+2019-05-18 12:43:03,479 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add hash
+2019-05-18 12:43:03,626 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add i2c
+2019-05-18 12:43:03,679 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add i2s
+2019-05-18 12:43:04,007 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add ipddr
+2019-05-18 12:43:04,085 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add ltdc
+2019-05-18 12:43:04,297 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add mdma
+2019-05-18 12:43:04,547 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add nvic
+2019-05-18 12:43:04,628 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add opamp
+2019-05-18 12:43:04,737 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add pdm2pcm
+2019-05-18 12:43:04,937 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add plateformsettings
+2019-05-18 12:43:04,963 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add quadspi
+2019-05-18 12:43:05,130 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add resmgrutility
+2019-05-18 12:43:05,284 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add sai
+2019-05-18 12:43:05,344 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add spi
+2019-05-18 12:43:05,438 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add stm32_wpan
+2019-05-18 12:43:05,462 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add tim
+2019-05-18 12:43:05,657 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add touchsensing
+2019-05-18 12:43:05,711 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add tracer_emb
+2019-05-18 12:43:05,731 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add ts
+2019-05-18 12:43:05,765 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add tsc
+2019-05-18 12:43:05,800 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add ucpd
+2019-05-18 12:43:05,858 [INFO] com.st.microxplorer.plugins.ipmanager.pluginmanagement.PluginManager.loadPluginJar(PluginManager.java:200) - loadIPPluginJar : add usart
+2019-05-18 12:43:08,019 [FATAL] com.st.microxplorer.plugins.updater.Updater.getSpecificTask(Updater.java:277) - Updater called before beeing initialized
+2019-05-18 12:43:08,686 [FATAL] com.st.microxplorer.plugins.updater.Updater.getSpecificTask(Updater.java:277) - Updater called before beeing initialized
+2019-05-18 12:43:08,687 [ERROR] com.st.microxplorer.plugins.thirdparty.engine.IntegrityCheckThread.getUpdaterThirdPartyList(IntegrityCheckThread.java:227) - Cannot obtain thirdParties list 21
+2019-05-18 12:43:08,687 [ERROR] com.st.microxplorer.plugins.thirdparty.engine.IntegrityCheckThread.run(IntegrityCheckThread.java:96) - Unexpected exception IntegrityCheckThread Thread: Updater error
+2019-05-18 12:43:08,691 [INFO] com.st.microxplorer.plugins.thirdparty.xml.ThirdPartyDb.closeDb(ThirdPartyDb.java:263) - Close Third Party DataBase File (C:/Users/erhan/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
+2019-05-18 12:43:09,139 [FATAL] com.st.microxplorer.plugins.updater.Updater.getSpecificTask(Updater.java:277) - Updater called before beeing initialized
+2019-05-18 12:43:09,154 [INFO] com.st.microxplorer.plugins.pinoutconfig.gui.PinOutPanel.setPackage(PinOutPanel.java:1361) - setPackage(No Configuration,No Configuration)
+2019-05-18 12:43:09,161 [FATAL] com.st.microxplorer.plugins.updater.Updater.getSpecificTask(Updater.java:277) - Updater called before beeing initialized
+2019-05-18 12:43:09,388 [INFO] com.st.microxplorer.plugins.updater.Updater.initPhase2(Updater.java:860) - Updater Version found : 5.2.0
+2019-05-18 12:43:09,441 [INFO] com.st.components.util.ApplicationProperties.getApplicationPath(ApplicationProperties.java:181) - Using Application install path: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831
+2019-05-18 12:43:10,625 [INFO] com.st.microxplorer.plugins.updater.engine.MainUpdater.performConnectionCheck(MainUpdater.java:2032) - connection check result : 10
+2019-05-18 12:43:10,628 [INFO] com.st.microxplorer.plugins.updater.engine.MainUpdater.<init>(MainUpdater.java:223) - Updater Check For Update Now.
+2019-05-18 12:43:10,629 [INFO] com.st.microxplorer.maingui.MicroXplorer.setDataBaseVersion(MicroXplorer.java:401) - Change Database Version : DB.5.0.20
+2019-05-18 12:43:10,824 [INFO] com.st.microxplorer.plugins.updater.engine.CheckServerUpdateThread.run(CheckServerUpdateThread.java:121) - End of CheckServer Thread
+2019-05-18 12:43:10,920 [INFO] com.st.microxplorer.plugins.updater.engine.MainUpdater.performConnectionCheck(MainUpdater.java:2032) - connection check result : 10
+2019-05-18 12:43:11,588 [INFO] com.st.microxplorer.maingui.MicroXplorer.setDataBaseInstallationPath(MicroXplorer.java:371) - Change Database Path : 
+2019-05-18 12:43:11,589 [INFO] com.st.microxplorer.maingui.MicroXplorer.setDataBaseVersion(MicroXplorer.java:401) - Change Database Version : DB.5.0.20
+2019-05-18 12:43:11,595 [INFO] com.st.microxplorer.plugins.pinoutconfig.gui.PinOutPanel.setPackage(PinOutPanel.java:1361) - setPackage(No Configuration,No Configuration)
+2019-05-18 12:43:11,599 [INFO] com.st.components.util.UtilMem.printUsedHeapMemory(UtilMem.java:74) - Begin LoadConfig() Used Memory: 142980248 Bytes (268435456)
+2019-05-18 12:43:11,601 [INFO] com.st.microxplorer.maingui.MicroXplorer.setDataBaseInstallationPath(MicroXplorer.java:371) - Change Database Path : 
+2019-05-18 12:43:11,601 [INFO] com.st.microxplorer.maingui.MicroXplorer.setDataBaseVersion(MicroXplorer.java:401) - Change Database Version : DB.5.0.20
+2019-05-18 12:43:11,601 [INFO] com.st.microxplorer.plugins.filemanager.engine.OpenFileManager.LoadConfig(OpenFileManager.java:269) - Change cursor
+2019-05-18 12:43:17,177 [WARN] com.st.microxplorer.mcu.IP.getRefParameters(IP.java:1918) - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2019-05-18 12:43:17,177 [WARN] com.st.microxplorer.mcu.IP.getRefParameters(IP.java:1918) - Analog_Filter not found: check if there is a RefParameter without a condition.
+2019-05-18 12:43:17,178 [INFO] com.st.microxplorer.util.ImportTextPane.optionalMessage(ImportTextPane.java:162) - (OptionalMessage_ERROR) IP (RCC) : Parameter (ADCFreqValue) has invalid value (32000000)
+2019-05-18 12:43:17,179 [INFO] com.st.microxplorer.util.ImportTextPane.optionalMessage(ImportTextPane.java:162) - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2019-05-18 12:43:17,179 [INFO] com.st.microxplorer.util.ImportTextPane.optionalMessage(ImportTextPane.java:162) - (OptionalMessage_ERROR) IP (RCC) : Parameter (MCOFreq_Value) has invalid value (64000000)
+2019-05-18 12:43:17,180 [INFO] com.st.microxplorer.util.ImportTextPane.optionalMessage(ImportTextPane.java:162) - (OptionalMessage_ERROR) IP (RCC) : Parameter (USBFreq_Value) has invalid value (64000000)
+2019-05-18 12:43:17,734 [INFO] com.st.components.util.UtilMem.printUsedHeapMemory(UtilMem.java:74) - End LoadConfig() Used Memory: 146334760 Bytes (268435456)
+2019-05-18 12:43:17,956 [INFO] com.st.microxplorer.plugins.thirdparty.xml.ThirdPartyDb.readDb(ThirdPartyDb.java:293) - Open Third Party DataBase File (C:/Users/erhan/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 6 ms. number of Sw pack : 13
+2019-05-18 12:43:18,801 [INFO] com.st.microxplorer.plugins.thirdparty.ThirdParty.logSwPackList(ThirdParty.java:1207) - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 1.1.0
+2019-05-18 12:43:18,802 [INFO] com.st.microxplorer.plugins.thirdparty.ThirdParty.logSwPackList(ThirdParty.java:1207) - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 5.2.1
+2019-05-18 12:43:18,802 [INFO] com.st.microxplorer.plugins.thirdparty.ThirdParty.logSwPackList(ThirdParty.java:1207) - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 4.2.0
+2019-05-18 12:43:18,802 [INFO] com.st.microxplorer.plugins.thirdparty.ThirdParty.logSwPackList(ThirdParty.java:1207) - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 4.3.0
+2019-05-18 12:43:18,802 [INFO] com.st.microxplorer.plugins.thirdparty.ThirdParty.logSwPackList(ThirdParty.java:1207) - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 6.0.1
+2019-05-18 12:43:18,803 [INFO] com.st.microxplorer.plugins.thirdparty.ThirdParty.logSwPackList(ThirdParty.java:1207) - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.3.0
+2019-05-18 12:43:18,803 [INFO] com.st.microxplorer.plugins.thirdparty.ThirdParty.logSwPackList(ThirdParty.java:1207) - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 4.4.0
+2019-05-18 12:43:18,803 [INFO] com.st.microxplorer.plugins.thirdparty.ThirdParty.logSwPackList(ThirdParty.java:1207) - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 6.1.0
+2019-05-18 12:43:18,803 [INFO] com.st.microxplorer.plugins.thirdparty.ThirdParty.logSwPackList(ThirdParty.java:1207) - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 1.4.0
+2019-05-18 12:43:18,803 [INFO] com.st.microxplorer.plugins.thirdparty.ThirdParty.logSwPackList(ThirdParty.java:1207) - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 3.0.0
+2019-05-18 12:43:19,328 [INFO] com.st.microxplorer.plugins.pinoutconfig.gui.PinOutPanel.setPackage(PinOutPanel.java:1361) - setPackage(No Configuration,No Configuration)
+2019-05-18 12:43:19,333 [INFO] com.st.microxplorer.plugins.pinoutconfig.gui.PinOutPanel.setPackage(PinOutPanel.java:1361) - setPackage(STM32F103RBTx,LQFP64)
+2019-05-18 12:43:20,660 [INFO] com.st.components.util.UtilMem.printUsedHeapMemory(UtilMem.java:74) - Before build in PCC Used Memory: 207317152 Bytes (268435456)
+2019-05-18 12:43:21,957 [INFO] com.st.microxplorer.plugins.power.util.SharedServices.getPowerFolderPath(SharedServices.java:71) - Folder for power plug-in: C:/Users/erhan/.stm32cubemx/plugins/power
+2019-05-18 12:43:21,972 [INFO] com.st.components.util.UtilMem.printUsedHeapMemory(UtilMem.java:74) - After build in PCC Used Memory: 218851488 Bytes (268435456)
+2019-05-18 12:43:22,089 [WARN] com.st.microxplorer.mcu.IP.getRefParameters(IP.java:1918) - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2019-05-18 12:43:22,089 [WARN] com.st.microxplorer.mcu.IP.getRefParameters(IP.java:1918) - Analog_Filter not found: check if there is a RefParameter without a condition.
+2019-05-18 12:43:22,484 [INFO] com.st.microxplorer.plugins.filemanager.engine.OpenFileManager.LoadConfig(OpenFileManager.java:289) - Restore cursor
+2019-05-18 12:43:22,490 [INFO] com.st.microxplorer.mcufinder.db.DbMcusXml.loadAltovaDocFromFile(DbMcusXml.java:106) - Load MCU database from C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831\\db\/mcu/families.xml
+2019-05-18 12:43:22,821 [WARN] com.st.microxplorer.mcu.IP.getRefParameters(IP.java:1918) - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2019-05-18 12:43:22,822 [WARN] com.st.microxplorer.mcu.IP.getRefParameters(IP.java:1918) - Analog_Filter not found: check if there is a RefParameter without a condition.
+2019-05-18 12:43:22,823 [WARN] com.st.microxplorer.mcu.IP.getRefParameters(IP.java:1918) - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2019-05-18 12:43:22,823 [WARN] com.st.microxplorer.mcu.IP.getRefParameters(IP.java:1918) - Analog_Filter not found: check if there is a RefParameter without a condition.
+2019-05-18 12:43:26,350 [INFO] com.st.microxplorer.mcufinder.db.DbMcusJson.LoadJsonArrayFromFile(DbMcusJson.java:87) - JSON generation date=Fri May 17 09:37:39 EET 2019 (1558075059)
+2019-05-18 12:43:31,069 [INFO] com.st.microxplorer.mcufinder.db.DbMcus.getDbManager(DbMcus.java:192) - Found 1486 MCUs (1445 are supported by CubeMX, 1445 are visible in CubeMX)
+2019-05-18 12:43:31,091 [INFO] com.st.microxplorer.mcufinder.db.ApiDb.loadFavorites(ApiDb.java:158) - Load user favorites file C:\Users\erhan/.stm32cubemx/favorites.mcus.txt: 0 item(s)
+2019-05-18 12:43:31,091 [INFO] com.st.microxplorer.mcufinder.db.ApiDb.loadFavorites(ApiDb.java:163) - User favorites MCUs=[]
+2019-05-18 12:43:31,091 [INFO] com.st.microxplorer.mcufinder.db.DbMcus.getDbManager(DbMcus.java:203) - Set 0 / 0 favorites MCUs
+2019-05-18 12:43:41,685 [INFO] com.st.microxplorer.plugins.ip.can.Can.onEnable(Can.java:56) - Can Add PropertyChangeListener com.st.microxplorer.plugins.ip.can.Can@1811e2a7
+2019-05-18 12:43:47,648 [INFO] com.st.components.util.UtilMem.printUsedHeapMemory(UtilMem.java:74) - End SaveConfig() Used Memory: 181295544 Bytes (294649856)
+2019-05-18 12:43:49,931 [INFO] com.st.components.util.UtilMem.printUsedHeapMemory(UtilMem.java:74) - End SaveConfig() Used Memory: 189071432 Bytes (294649856)
+2019-05-18 12:43:52,328 [INFO] com.st.microxplorer.plugins.ipmanager.gui.BlockDiagram.setSpecificCodeInputsForAllPlugins(BlockDiagram.java:1879) - set Specific Code input for plugin: NVIC
+2019-05-18 12:43:52,328 [INFO] com.st.microxplorer.plugins.ipmanager.gui.BlockDiagram.setSpecificCodeInputsForAllPlugins(BlockDiagram.java:1879) - set Specific Code input for plugin: USART
+2019-05-18 12:43:52,328 [INFO] com.st.microxplorer.plugins.ipmanager.gui.BlockDiagram.setSpecificCodeInputsForAllPlugins(BlockDiagram.java:1879) - set Specific Code input for plugin: SYS
+2019-05-18 12:43:52,329 [INFO] com.st.microxplorer.plugins.ipmanager.gui.BlockDiagram.setSpecificCodeInputsForAllPlugins(BlockDiagram.java:1879) - set Specific Code input for plugin: RCC
+2019-05-18 12:43:52,329 [INFO] com.st.microxplorer.plugins.ipmanager.gui.BlockDiagram.setSpecificCodeInputsForAllPlugins(BlockDiagram.java:1879) - set Specific Code input for plugin: I2C
+2019-05-18 12:43:52,330 [INFO] com.st.microxplorer.codegenerator.CodeGenerator.setProjectSettings(CodeGenerator.java:572) - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201904230831\\db\
+2019-05-18 12:43:52,340 [WARN] com.st.microxplorer.mcu.IP.getRefParameters(IP.java:1918) - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2019-05-18 12:43:52,341 [WARN] com.st.microxplorer.mcu.IP.getRefParameters(IP.java:1918) - Analog_Filter not found: check if there is a RefParameter without a condition.
+2019-05-18 12:43:53,233 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:190) - oldGeneratedFile, C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\MXTmpFiles\license.tmp_save
+2019-05-18 12:43:54,769 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:208) - Generated code: C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\MXTmpFiles\license.tmp
+2019-05-18 12:43:55,625 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:190) - oldGeneratedFile, C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\MXTmpFiles\gpio.tmp_save
+2019-05-18 12:43:56,449 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:208) - Generated code: C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\MXTmpFiles\gpio.tmp
+2019-05-18 12:43:56,613 [ERROR] com.st.microxplorer.codegenerator.IPConfigManager.getIPConfigModelsList(IPConfigManager.java:1259) - ERROR: the RefConfig I2C_Analogue is not available in your config.xml file
+2019-05-18 12:43:56,613 [ERROR] com.st.microxplorer.codegenerator.IPConfigManager.getIPConfigModelsList(IPConfigManager.java:1259) - ERROR: the RefConfig I2C_DigitalFolter is not available in your config.xml file
+2019-05-18 12:43:58,047 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:190) - oldGeneratedFile, C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\Core\Src\stm32f1xx_it.c_save
+2019-05-18 12:43:58,891 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:208) - Generated code: C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\Core\Src\stm32f1xx_it.c
+2019-05-18 12:43:58,949 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:190) - oldGeneratedFile, C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\Core\Inc\stm32f1xx_it.h_save
+2019-05-18 12:43:59,644 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:208) - Generated code: C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\Core\Inc\stm32f1xx_it.h
+2019-05-18 12:43:59,791 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:190) - oldGeneratedFile, C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\Core\Src\stm32f1xx_hal_msp.c_save
+2019-05-18 12:44:00,383 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:208) - Generated code: C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\Core\Src\stm32f1xx_hal_msp.c
+2019-05-18 12:44:00,482 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:190) - oldGeneratedFile, C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\MXTmpFiles\system.tmp_save
+2019-05-18 12:44:00,912 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:208) - Generated code: C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\MXTmpFiles\system.tmp
+2019-05-18 12:44:01,108 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:190) - oldGeneratedFile, C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\Core\Inc\stm32f1xx_hal_conf.h_save
+2019-05-18 12:44:01,415 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:208) - Generated code: C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\Core\Inc\stm32f1xx_hal_conf.h
+2019-05-18 12:44:01,512 [WARN] com.st.microxplorer.codegenerator.IPConfigManager.getMainConfig(IPConfigManager.java:2546) - IP not found : gpio
+2019-05-18 12:44:01,531 [WARN] com.st.microxplorer.codegenerator.CodeGenerator.generateMainCode(CodeGenerator.java:2532) - IP not found : gpio
+2019-05-18 12:44:01,643 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:190) - oldGeneratedFile, C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\Core\Inc\main.h_save
+2019-05-18 12:44:02,074 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:208) - Generated code: C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\Core\Inc\main.h
+2019-05-18 12:44:02,286 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:190) - oldGeneratedFile, C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\Core\Src\main.c_save
+2019-05-18 12:44:02,756 [INFO] com.st.microxplorer.codegenerator.CodeEngine.genCode(CodeEngine.java:208) - Generated code: C:\Users\erhan\github\Drivers\TSL2561_DigitalLightSensor\STM32F1_HAL\TSL2561_DigitalLightSensor_HAL\Core\Src\main.c
+2019-05-18 12:44:06,955 [INFO] com.st.microxplorer.plugins.projectmanager.engine.ProjectBuilder.createLibrariesFolders(ProjectBuilder.java:1489) - Time for Copy HAL[1] : 1974mS.
+2019-05-18 12:44:06,963 [INFO] com.st.microxplorer.plugins.projectmanager.engine.ProjectBuilder.createToolChainFolders(ProjectBuilder.java:2057) - Project Generator version: 3.2.0
+2019-05-18 12:44:07,903 [INFO] com.st.microxplorer.plugins.projectmanager.model.ConfigFileManager.createTmpFile(ConfigFileManager.java:880) - The Die is : DIE410
+2019-05-18 12:44:13,006 [INFO] com.st.microxplorer.plugins.projectmanager.engine.ProjectBuilder.createToolChainFolders(ProjectBuilder.java:2150) - Time for Generating toolchain IDE Files: 6043mS.
+2019-05-18 12:44:13,007 [INFO] com.st.microxplorer.plugins.projectmanager.engine.ProjectBuilder.createCmsisFolder(ProjectBuilder.java:1380) - Time for Copy CMSIS : 0mS.
+2019-05-18 12:44:13,011 [INFO] com.st.microxplorer.plugins.projectmanager.engine.ProjectBuilder.createCmsisFolder(ProjectBuilder.java:1380) - Time for Copy CMSIS : 0mS.

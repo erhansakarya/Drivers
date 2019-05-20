@@ -1,0 +1,5 @@
+HTU21D.c:26:9:HTU21D_init	16	static
+HTU21D.c:37:16:HTU21D_softReset	24	static
+HTU21D.c:58:16:HTU21D_configUserRegister	32	static
+HTU21D.c:97:6:HTU21D_handler	40	static
+HTU21D.c:153:13:calculateTempHum	32	static

@@ -1,0 +1,143 @@
+#include "main.h"
+#include "HTU21D.h"
+
+/*
+ * NOTES:
+ * temp = -40 to 125, hum = 0 to 100
+ * hum için mesauring time = 12bit 14ms, 11bit 7ms, 10bit 4ms, 8bit 2ms
+ * temp için measuring time = 14bit 44ms, 13bit 22ms, 12bit 11ms, 11bit 6ms
+ * TEMPERATURE COEFFICIENT .. kısmını oku ve anla.
+ * initte, 15ms bekle, soft reset at, 15ms bekle.
+ * 16 bitlik verinin en değerli 14 biti kullanılır ve sondaki iki bitin 1. biti
+ * 0 ise temperature, 1 ise humidity verisi olduğunu söyler.
+ * User register'a yazmadan önce oku, sonra orla ve yaz.
+ * End of the battery alert is activated when the battery power falls below 2.25V.
+ * Bu hata durumunu union ile her komponentin hata durumlarını işle.
+ *
+ * */
+
+static uint8_t HTU21D_softReset(void);
+static uint8_t HTU21D_configUserRegister(HTU21D_measRes_e measRes);
+
+uint8_t HTU21D_init(void){
+
+	uint8_t error = 0;
+
+	HTU21D_softReset();
+	HTU21D_configUserRegister(RH12TEMP14);
+
+	return error;
+
+}
+
+static uint8_t HTU21D_softReset(void){
+
+	uint8_t error = 0;
+	uint8_t pData = 0;
+
+	HAL_Delay(15);
+
+	/* NOTE: Send soft reset command */
+	pData = HTU21D_SOFT_RESET;
+	if(HAL_I2C_Master_Transmit(&hi2c1, HTU21D_ADDR, &pData,
+					1, HAL_MAX_DELAY) != HAL_OK ){
+
+		Error_Handler();
+	}
+
+	HAL_Delay(15);
+
+	return error;
+
+}
+
+static uint8_t HTU21D_configUserRegister(HTU21D_measRes_e measRes){
+
+	uint8_t status = 0;
+	uint8_t pData[2] = 0;
+
+	/* NOTE: Send Read User Register Command */
+	memset(pData, 0, sizeof(pData) / sizeof(pData[0]));
+	pData = HTU21D_RD_USRRG;
+	if(HAL_I2C_Master_Transmit(&hi2c1, HTU21D_ADDR, &pData,
+					1, HAL_MAX_DELAY) != HAL_OK ){
+
+		Error_Handler();
+	}
+
+	/* NOTE: Read User Register */
+	memset(pData, 0, sizeof(pData) / sizeof(pData[0]));
+	if(HAL_I2C_Master_Receive(&hi2c1, HTU21D_ADDR, &pData[1],
+					1, HAL_MAX_DELAY) != HAL_OK ){
+
+		Error_Handler();
+	}
+
+	/* NOTE: Manipulate User Register Value */
+	pData[1] |= measRes;
+
+	/* NOTE: Send Write User Register Command and Write Manipulated Value */
+	if(HAL_I2C_Master_Transmit(&hi2c1, HTU21D_ADDR, &pData,
+					2, HAL_MAX_DELAY) != HAL_OK ){
+
+		Error_Handler();
+	}
+
+	/* NOTE: Read again user register value for verify */
+
+	return status;
+
+}
+
+void HTU21D_handler(void *htu21d){
+
+	uint8_t pData[2];
+	uint8_t temp[3];
+	uint8_t hum[3];
+	uint16_t temporaryVal = 0;
+
+	memset(pData, 0, sizeof(pData) / sizeof(pData[0]));
+	memset(temp, 0, sizeof(temp) / sizeof(temp[0]));
+	memset(hum, 0, sizeof(hum) / sizeof(hum[0]));
+
+	for(;;){
+
+		/* NOTE: Send Trigger temperature measurement in hold master Command */
+		memset(pData, 0, sizeof(pData) / sizeof(pData[0]));
+		pData[0] = HTU21D_TEMP_HOLD;
+		if(HAL_I2C_Master_Transmit(&hi2c1, HTU21D_ADDR, pData,
+						1, HAL_MAX_DELAY) != HAL_OK ){
+
+			Error_Handler();
+		}
+
+		/* NOTE: Read Temperature(MSB+LSB+CRC) */
+		if(HAL_I2C_Master_Receive(&hi2c1, HTU21D_ADDR, temp,
+						3, HAL_MAX_DELAY) != HAL_OK ){
+
+			Error_Handler();
+		}
+
+		temporaryVal = (temp[0] << 8) | (temp[1] & )
+
+		/* NOTE: Send Trigger humidity measurement in hold master Command */
+		memset(pData, 0, sizeof(pData) / sizeof(pData[0]));
+		pData[0] = HTU21D_HUM_HOLD;
+		if(HAL_I2C_Master_Transmit(&hi2c1, HTU21D_ADDR, pData,
+						1, HAL_MAX_DELAY) != HAL_OK ){
+
+			Error_Handler();
+		}
+
+		/* NOTE: Read Humidity(MSB+LSB+CRC) */
+		if(HAL_I2C_Master_Receive(&hi2c1, HTU21D_ADDR, hum,
+						3, HAL_MAX_DELAY) != HAL_OK ){
+
+			Error_Handler();
+		}
+
+
+
+	}
+
+}

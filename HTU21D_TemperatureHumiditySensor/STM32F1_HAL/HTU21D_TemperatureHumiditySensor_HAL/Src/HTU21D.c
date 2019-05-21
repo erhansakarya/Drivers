@@ -4,21 +4,6 @@
 #include "main.h"
 #include "HTU21D.h"
 
-/*
- * NOTES:
- * temp = -40 to 125, hum = 0 to 100
- * hum için mesauring time = 12bit 14ms, 11bit 7ms, 10bit 4ms, 8bit 2ms
- * temp için measuring time = 14bit 44ms, 13bit 22ms, 12bit 11ms, 11bit 6ms
- * TEMPERATURE COEFFICIENT .. kısmını oku ve anla.
- * initte, 15ms bekle, soft reset at, 15ms bekle.
- * 16 bitlik verinin en değerli 14 biti kullanılır ve sondaki iki bitin 1. biti
- * 0 ise temperature, 1 ise humidity verisi olduğunu söyler.
- * User register'a yazmadan önce oku, sonra orla ve yaz.
- * End of the battery alert is activated when the battery power falls below 2.25V.
- * Bu hata durumunu union ile her komponentin hata durumlarını işle.
- *
- * */
-
 static uint8_t HTU21D_softReset(void);
 static uint8_t HTU21D_configUserRegister(HTU21D_measRes_e measRes);
 static void calculateTempHum(uint16_t *rawValues, void *htu21d);
@@ -104,9 +89,11 @@ void HTU21D_handler(void *htu21d){
 	memset(pData, 0, sizeof(pData) / sizeof(pData[0]));
 	memset(temp, 0, sizeof(temp) / sizeof(temp[0]));
 	memset(hum, 0, sizeof(hum) / sizeof(hum[0]));
-	memset(rawValues, 0, 4);
+	memset(rawValues, 0, sizeof(rawValues) / sizeof(uint8_t));
 
 	for(;;){
+
+		HAL_Delay(50);
 
 		/* NOTE: Send Trigger temperature measurement in hold master Command */
 		memset(pData, 0, sizeof(pData) / sizeof(pData[0]));
@@ -125,6 +112,8 @@ void HTU21D_handler(void *htu21d){
 		}
 
 		rawValues[0] = (temp[0] << 8) | (temp[1] & ~0x03);
+
+		HAL_Delay(20);
 
 		/* NOTE: Send Trigger humidity measurement in hold master Command */
 		memset(pData, 0, sizeof(pData) / sizeof(pData[0]));

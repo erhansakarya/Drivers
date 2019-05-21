@@ -1,18 +1,17 @@
-19:47:29 **** Incremental Build of configuration Debug for project HTU21D_TemperatureHumiditySensor_HAL ****
+10:06:46 **** Incremental Build of configuration Debug for project HTU21D_TemperatureHumiditySensor_HAL ****
 make -j4 all 
 arm-none-eabi-gcc "../Src/HTU21D.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/HTU21D.d" -MT"Src/HTU21D.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/HTU21D.o"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
 arm-none-eabi-gcc -o "HTU21D_TemperatureHumiditySensor_HAL.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\erhan\github\Drivers\HTU21D_TemperatureHumiditySensor\STM32F1_HAL\HTU21D_TemperatureHumiditySensor_HAL\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HTU21D_TemperatureHumiditySensor_HAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: HTU21D_TemperatureHumiditySensor_HAL.elf
  
 arm-none-eabi-objdump -h -S  HTU21D_TemperatureHumiditySensor_HAL.elf  > "HTU21D_TemperatureHumiditySensor_HAL.list"
 arm-none-eabi-size   HTU21D_TemperatureHumiditySensor_HAL.elf 
    text	   data	    bss	    dec	    hex	filename
-  12724	     20	   1724	  14468	   3884	HTU21D_TemperatureHumiditySensor_HAL.elf
+  12740	     20	   1724	  14484	   3894	HTU21D_TemperatureHumiditySensor_HAL.elf
 Finished building: default.size.stdout
  
 Finished building: HTU21D_TemperatureHumiditySensor_HAL.list
  
 
-19:47:33 Build Finished. 0 errors, 0 warnings. (took 3s.576ms)
+10:06:50 Build Finished. 0 errors, 0 warnings. (took 3s.560ms)
 
